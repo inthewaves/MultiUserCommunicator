@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MultiUserCommunicator</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="login_failed_missing_service">"Login failed: Missing service"</string>
+    <string name="current_logged_in_user_s">Current logged in user: %s</string>
+    <string name="login_failed_service_returned_failure">Failed to login: Service returned false</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.multiusercommunicator">
+    <!-- <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" /> -->
+
+    <application
+        android:fullBackupContent="false"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MultiUserCommunicator">
+
+        <!-- singleUser: boolean
+             If set to true, a single instance of this component will run for
+             all users.  That instance will run as user 0, the default/primary
+             user.  When the app running is in processes for other users and interacts
+             with this component (by binding to a service for example) those processes will
+             always interact with the instance running for user 0.  Enabling
+             single user mode forces "exported" of the component to be false, to
+             help avoid introducing multi-user security bugs.  This feature is only
+             available to applications built in to the system image; you must hold the
+             permission INTERACT_ACROSS_USERS in order
+             to use this feature.  This flag can only be used with services,
+             receivers, and providers; it can not be used with activities. -->
+        <service
+            android:name=".service.LoginService"
+            android:enabled="true"
+            android:exported="false"/>
+        <!--android:singleUser="true"/> -->
+
+    <activity
+        android:name=".ui.login.LoginActivity"
+        android:label="@string/app_name">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+</application>
+
+</manifest>
